@@ -13,6 +13,16 @@ class Content extends Admin_Controller{
 		$posts = $this->post_model->where('deleted', 0)->find_all();
 		Template::set('posts', $posts);
 		Template::render();
+		if($this->input->post('submit')){
+			$string = '';
+			foreach($this->input->post('checked') as $id){
+				$this->post_model->delete($id);
+				$string .= "Post #$id was deleted <br />";
+			}
+			Template::set_message($string);
+			redirect(SITE_AREA.'/content/blog');
+			//print_r($this->input->post('checked'));
+		}
 	}
 
 	public function create(){
@@ -50,5 +60,9 @@ class Content extends Admin_Controller{
 		Template::set('toolbar_title', 'Edit Post');
 		Template::set_view('content/post_form');
 		Template::render();
+	}
+
+	public function delete($ids=array()){
+
 	}
 }

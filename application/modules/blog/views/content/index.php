@@ -7,8 +7,8 @@
             <thead>
                 <tr>
                     <th class="column-check"><input class="check-all" type="checkbox" /></th>
-                    <th>Title</th>
-                    <th style="width: 10em">Date</th>
+                    <th>Título</th>
+                    <th style="width: 10em">Data</th>
                 </tr>
             </thead>
             <tfoot>
