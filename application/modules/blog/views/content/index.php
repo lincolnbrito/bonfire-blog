@@ -1,5 +1,5 @@
 <div class="admin-box">
-    <h3>Blog Posts</h3>
+    <h3>Posts do Blog</h3>
 
     <?php echo form_open(); ?>
 
