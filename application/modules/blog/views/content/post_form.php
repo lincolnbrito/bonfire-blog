@@ -15,7 +15,7 @@
                 <label for="slug">Slug</label>
                 <div class="controls">
                     <div class="input-prepend">
-                        <span class="add-on"><?php echo site_url() .'/blog/' ?></span>
+                        <span class="add-on"><?php echo site_url() .'blog/' ?></span>
                         <input type="text" name="slug" class="input-xlarge" value="<?php echo isset($post) ? $post->slug : set_value('slug'); ?>" />
                     </div>
                     <?php if (form_error('slug')) echo '<span class="help-inline">'. form_error('slug') .'</span>'; ?>
